@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import { Inter } from 'next/font/google';
+import { Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import TransitionProvider from '@/components/transitionProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+export const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Framer Motion Portfolio',
@@ -18,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={roboto_mono.className}>
         <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>
