@@ -7,4 +7,6 @@ section {
   width: 100vw;
   scroll-snap-align: center;
   overflow: hidden;
+  background-color: #0c0c1d;
+  color: lightgray;
 }
